@@ -549,18 +549,14 @@ section {
 }
 
 .row {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px; /* spacing between cards */
   padding-top: 15px;
-  align-items: start;
-}
-@media (max-width: 768px) {
-  .row {
-    grid-template-columns: 1fr; /* single column */
-    padding-left: 10px;
-    padding-right: 10px;
-  }
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+  box-sizing: border-box; /* important for sizing */
 }
 
 .card {
@@ -568,10 +564,27 @@ section {
   border: 1px solid #ddd;
   border-radius: 10px;
   padding: 16px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   cursor: pointer;
-  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease, opacity 0.4s ease, max-height 0.4s ease, padding 0.4s ease;
   margin: 0;
+
+  flex: 0 0 calc((100% - 30px) / 3); /* 3 cards per row, 30px total gap */
+  max-width: calc((100% - 30px) / 3);
+  box-sizing: border-box; /* make sure padding/border included */
+
+  /* Start visible */
+  opacity: 1;
+  max-height: 1000px;
+  padding: 16px;
+}
+
+/* Mobile: single column */
+@media (max-width: 768px) {
+  .card {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 }
 
 .card:hover {
@@ -584,23 +597,13 @@ section {
   justify-content: space-between;
   color: #333;
 }
-.card-category{
+
+.card-category {
   font-size: 0.8em;
   font-weight: 700;
   padding: 0 0.5rem;
   margin: auto 0;
   border-radius: 25px;
-}
-.card {
-    transition: all 0.3s ease-in-out;
-}
-.card[style*="display: none"] {
-    opacity: 0;
-    transform: scale(0.95);
-}
-.card[style*="display: block"] {
-    opacity: 1;
-    transform: scale(1);
 }
 
 .nails.card-category {
@@ -620,14 +623,14 @@ section {
   color: var(--color-hair);
   border: var(--color-hair) 1px solid;
   box-shadow: var(--color-hair-transparent) 0 0 3px 1px;
-
 }
-.makeup.card-category{
+.makeup.card-category {
   background-color: rgba(0, 0, 0, 0.05);
   color: var(--color-makeup);
   border: var(--color-makeup) 1px solid;
   box-shadow: var(--color-makeup-transparent) 0 0 3px 1px;
 }
+
 .card-time {
   font-size: 0.8em;
   color: #666;
@@ -640,19 +643,18 @@ section {
   padding-bottom: 1rem;
   padding-top: 2rem;
 
-  /* Enable horizontal scrolling on overflow (for mobile) */
   overflow-x: auto;
-  -webkit-overflow-scrolling: touch; /* smooth momentum scroll on iOS */
-  scrollbar-width: thin; /* Firefox scrollbar */
-  scrollbar-color: var(--color-primary) transparent; /* Firefox scrollbar color */
-  padding-left: 1rem; /* padding for scroll start */
-  padding-right: 1rem; /* padding for scroll end */
-  margin: 0; /* reset default list margin */
-  list-style: none; /* remove default bullets if ul */
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-primary) transparent;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: 0;
+  list-style: none;
 }
 
 .services-categories::-webkit-scrollbar {
-  height: 6px; /* scrollbar height */
+  height: 6px;
 }
 
 .services-categories::-webkit-scrollbar-track {
@@ -664,7 +666,6 @@ section {
   border-radius: 3px;
 }
 
-/* List items */
 .services-categories li {
   background-color: rgba(0, 0, 0, 0.05);
   color: var(--color-cat);
@@ -674,12 +675,10 @@ section {
   padding: 0 1rem;
   min-width: 4rem;
   cursor: pointer;
-
-  flex: 0 0 auto; /* prevent shrinking, keep width for horizontal scroll */
-  user-select: none; /* prevent text selection on tap */
+  flex: 0 0 auto;
+  user-select: none;
 }
 
-/* Active filter styling */
 .services-categories li.cat-active {
   background-color: rgba(0, 0, 0, 0.05);
   color: var(--color-primary);
@@ -691,21 +690,16 @@ section {
   margin-top: 12px;
   font-size: 0.9em;
   color: #555;
-  
-  max-height: 0;           /* Hide by collapsing height */
-  overflow: hidden;        /* Hide overflowing text */
+
+  max-height: 0;
+  overflow: hidden;
   transition: max-height 0.4s ease, padding 0.3s ease;
-  padding: 0 0;            /* Remove padding when hidden */
+  padding: 0 0;
 }
 
 .card.active .card-description {
-  max-height: 200px;       /* Enough height to show content */
-  padding: 12px 0;         /* Restore vertical padding */
-}
-
-.single-card:hover .card-icon {
-  background-color: var(--color-primary);
-  color: var(--color-white);
+  max-height: 200px;
+  padding: 12px 0;
 }
 
 .disabled-anchor{
@@ -1441,8 +1435,8 @@ textarea {
   color: var(--color-white);
   border-radius: 50%;
   position: fixed;
-  bottom: 1.2rem;
-  right: 1.2rem; /* Changed from left: 95% to right: 1.2rem */
+  bottom: 2rem;
+  right: 2rem; /* Changed from left: 95% to right: 1.2rem */
   transition: all var(--transition-normal);
   z-index: 9999; /* Optional: ensures it stays on top */
 }

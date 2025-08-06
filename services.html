@@ -1,60 +1,451 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lina's Touch - Services</title>
-    <meta
-      name="description"
-      content="Experience luxury nail treatments in a serene environment at Lina's Touch."
-    />
-    <meta name="author" content="Curvea Design" />
-    <meta
-      name="keywords"
-      content="Lina's touch, nail salon, manicure, pedicure, gel nails, acrylic nails, nail art, nail extensions, French manicure, spa pedicure, cuticle care, nail repair, polish change, beauty spa, luxury nails, elegant nails, pampering, self-care, beauty lounge, premium beauty, upscale treatments, relaxation, indulgence, flawless finish, glow-up, rejuvenation, OPI, Essie, CND Shellac, paraffin treatment, long-lasting polish, cruelty-free products, organic spa, nail shaping, glossy finish, matte nails, nail trends, clean beauty, waxing, facial, brow shaping, lash lift, skincare, threading, body scrub, makeup touch-ups, makeup, Lebanese beauty, Beirut glam, personalized service, client-first experience, beauty experts, trusted professionals, hair salon, haircare, haircut, hairstyling, blow dry, keratin treatment, balayage, hair color, highlights, hair gloss, hair repair, split ends, hair mask, scalp treatment, frizz control, root touch-up, hair shine, healthy hair, hair hydration, smoothing treatment, deep conditioning, shine boost, heat protection, professional styling,
-waxing, hair removal, body waxing, facial waxing, eyebrow shaping, upper lip waxing, bikini waxing, Brazilian wax, underarm waxing, full leg wax, arms wax, gentle wax, sugaring, threading, smooth skin, skin exfoliation, long-lasting smoothness, soft finish, irritation-free, sensitive skin care, post-wax care"
-    />
-    <meta name="robots" content="index, follow" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lina's Touch - Nails, Hair, Waxing & Makeup Services</title>
+  <meta name="description" content="Discover our premium services at Lina's Touch, offering expert nail care, hairstyling, waxing, and makeup treatments in a luxurious and relaxing environment." />
+  <meta name="author" content="Curvea Design" />
+  <meta name="keywords" content="Lina's Touch, beauty salon, nail services, hair salon, waxing services, makeup artist, manicure, pedicure, gel nails, acrylic nails, nail art, hair styling, blow dry, keratin treatment, hair color, balayage, highlights, Brazilian wax, facial waxing, lash lift, brow shaping, makeup touch-ups, beauty spa, Lebanese beauty, Beirut salon, premium beauty services, self-care" />
+  <meta name="robots" content="index, follow" />
 
-    <meta property="og:title" content="Lina's Touch - Services" />
-    <meta
-      property="og:description"
-      content="Experience luxury nail treatments in a serene environment at Lina's Touch."
-    />
-    <meta
-      property="og:image"
-      content="https://website.com/assets/img/hero.jpg"
-    />
-    <meta property="og:url" content="https://website.com" />
-    <meta property="og:type" content="website" />
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Lina's Touch - Nails, Hair, Waxing & Makeup Services" />
+  <meta property="og:description" content="Discover our premium services at Lina's Touch, offering expert nail care, hairstyling, waxing, and makeup treatments in a luxurious and relaxing environment." />
+  <meta property="og:image" content="https://linastouch.com/assets/img/linas-touch.png" />
+  <meta property="og:url" content="https://linastouch.com/services" />
+  <meta property="og:type" content="website" />
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Lina's Touch - Services" />
-    <meta
-      name="twitter:description"
-      content="Experience luxury nail treatments in a serene environment at Lina's Touch."
-    />
-    <meta
-      name="twitter:image"
-      content="https://website.com/assets/img/hero.jpg"
-    />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Lina's Touch - Nails, Hair, Waxing & Makeup Services" />
+  <meta name="twitter:description" content="Discover our premium services at Lina's Touch, offering expert nail care, hairstyling, waxing, and makeup treatments in a luxurious and relaxing environment." />
+  <meta name="twitter:image" content="https://linastouch.com/assets/img/linas-touch.png" />
 
-    <meta name="theme-color" content="#7E69AB" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#7E69AB" />
 
-    <!-- Google Fonts -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    />
-    <!-- CSS -->
-    <link rel="stylesheet" href="styles/main.css" />
-  </head>
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+  <!-- Preconnect for Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+
+  <!-- Google Fonts -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" /></noscript>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="styles/main.css" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Beauty Salon Services",
+  "provider": {
+    "@type": "BeautySalon",
+    "name": "Lina's Touch",
+    "image": "https://linastouch.com/assets/img/linas-touch.png",
+    "url": "https://linastouch.com/services.html",
+    "telephone": "+96171363003",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Antelias-Bikfaya Highway, Elissar, near Blom Bank, Rawad Haddad Salon",
+      "addressLocality": "Elissar",
+      "addressRegion": "Mount Lebanon Governorate",
+      "addressCountry": "LB"
+    },
+    "sameAs": [
+      "https://www.instagram.com/linastouch_lb"
+    ]
+  },
+  "description": "Comprehensive beauty services including nails, waxing, hair styling, and makeup, delivered with premium care at Lina's Touch.",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Lina's Touch Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Classic Manicure",
+          "description": "Complete nail care with shaping, cuticle care, and regular polish application.",
+          "serviceType": "Nails",
+          "duration": "PT35M"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Classic Pedicure",
+          "description": "Nail shaping, cuticle care, exfoliation, and a relaxing massage with polish.",
+          "serviceType": "Nails",
+          "duration": "PT45M"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Gentle Care Pedicure",
+          "description": "Soothing treatment with extra gentle exfoliation and hydration, perfect for sensitive or delicate feet.",
+          "serviceType": "Nails",
+          "duration": "PT60M"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Gelish Rubber Base Coat",
+          "description": "A flexible and strong base gel that protects and enhances nail polish longevity.",
+          "serviceType": "Nails",
+          "duration": "PT50M"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Acrylic Full Set",
+          "description": "Complete application of durable acrylic nails for a flawless, long-lasting look.",
+          "serviceType": "Nails",
+          "duration": "PT1H40M"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Acrylic Refill",
+          "description": "Maintenance service to refresh and strengthen your existing acrylic nails.",
+          "serviceType": "Nails",
+          "duration": "PT45M"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Gel Full Set",
+          "description": "Beautiful, durable gel extensions for a natural-looking, long-lasting finish.",
+          "serviceType": "Nails",
+          "duration": "PT1H40M"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Gel Refill",
+          "description": "Maintenance to strengthen and refresh your existing gel nails for lasting perfection.",
+          "serviceType": "Nails",
+          "duration": "PT45M"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "GelX",
+          "description": "Durable and natural-looking gel extensions using premium Gelix products for a flawless finish.",
+          "serviceType": "Nails",
+          "duration": "PT60M"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "French Manicure",
+          "description": "Classic, elegant nail design with clean white tips and a natural base for a timeless look.",
+          "serviceType": "Nails",
+          "duration": "PT15M"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Artificial Nails",
+          "description": "Custom-shaped enhancements applied to add length and elegance with a natural finish.",
+          "serviceType": "Nails",
+          "duration": "PT45M"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Paraffin Treatment",
+          "description": "Warm paraffin wax therapy to deeply moisturize and soften your hands and feet, promoting smooth, nourished skin.",
+          "serviceType": "Nails",
+          "duration": "PT20M"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Pedex Foot Treatment",
+          "description": "Advanced foot care using the Pedex system to gently exfoliate and smooth rough skin for healthier, softer feet.",
+          "serviceType": "Nails",
+          "duration": "PT20M"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Eyebrow Waxing",
+          "description": "Professional eyebrow shaping and waxing for perfectly defined brows.",
+          "serviceType": "Waxing",
+          "duration": "PT20M"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Eyebrow Threading",
+          "description": "Precise eyebrow shaping using traditional threading technique for ultimate precision.",
+          "serviceType": "Waxing",
+          "duration": "PT15M"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Upper Lip Wax",
+          "description": "Quick and precise upper lip hair removal with gentle, skin-safe wax.",
+          "serviceType": "Waxing",
+          "duration": "PT10M"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Underarm Waxing",
+          "description": "Professional underarm hair removal with long-lasting smooth results.",
+          "serviceType": "Waxing",
+          "duration": "PT20M"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Brushing",
+          "description": "Luxurious wash, blow-dry, and styling for smooth, voluminous hair.",
+          "serviceType": "Hair Styling",
+          "duration": "PT45M"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Flat Iron",
+          "description": "Sleek, straight finish using professional-grade flat iron styling.",
+          "serviceType": "Hair Styling",
+          "duration": "PT30M"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Half Ponytail",
+          "description": "Elegant half-up style for a polished, effortless look.",
+          "serviceType": "Hair Styling",
+          "duration": "PT20M"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Chignon",
+          "description": "Classic low bun styled for formal events or everyday elegance.",
+          "serviceType": "Hair Styling",
+          "duration": "PT40M"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Haircut",
+          "description": "Precision cut tailored to your style and face shape.",
+          "serviceType": "Hair Styling",
+          "duration": "PT30M"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Hair Color",
+          "description": "Vibrant, full-head color customized to your desired shade.",
+          "serviceType": "Hair Styling",
+          "duration": "PT60M"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Rinse",
+          "description": "Gentle color refresh for added shine and tone correction.",
+          "serviceType": "Hair Styling",
+          "duration": "PT15M"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Highlights",
+          "description": "Multi-dimensional color accents for depth and brightness.",
+          "serviceType": "Hair Styling",
+          "duration": "PT90M"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Ombre",
+          "description": "Seamless gradient color from dark roots to lighter ends.",
+          "serviceType": "Hair Styling",
+          "duration": "PT90M"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Balayage",
+          "description": "Hand-painted highlights for a soft, natural sun-kissed effect.",
+          "serviceType": "Hair Styling",
+          "duration": "PT90M"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Brazilian Blowout",
+          "description": "Smoothing treatment for frizz-free, glossy, and manageable hair.",
+          "serviceType": "Hair Styling",
+          "duration": "PT120M"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Oil Bath",
+          "description": "Nourishing oil treatment to hydrate and strengthen hair.",
+          "serviceType": "Hair Styling",
+          "duration": "PT20M"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Day Makeup",
+          "description": "Light, natural look perfect for daytime events or casual outings.",
+          "serviceType": "Makeup",
+          "duration": "PT30M"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Evening Glam",
+          "description": "Bold, dramatic makeup with contouring and shimmer for night events.",
+          "serviceType": "Makeup",
+          "duration": "PT45M"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Bridal Makeup",
+          "description": "Elegant, long-lasting makeup tailored for your wedding day.",
+          "serviceType": "Makeup",
+          "duration": "PT90M"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Engagement Makeup",
+          "description": "Flawless, photo-ready look for your special engagement shoot.",
+          "serviceType": "Makeup",
+          "duration": "PT60M"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Photoshoot Makeup",
+          "description": "Camera-friendly makeup with flawless finish and defined features.",
+          "serviceType": "Makeup",
+          "duration": "PT60M"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Makeup Consultation",
+          "description": "Personalized advice on products, techniques, and skin tones.",
+          "serviceType": "Makeup",
+          "duration": "PT30M"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Eye Makeup Only",
+          "description": "Defined brows, shadow, and lashes for a striking eye look.",
+          "serviceType": "Makeup",
+          "duration": "PT20M"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Touch-Up",
+          "description": "Quick refresh to keep your makeup flawless throughout the day.",
+          "serviceType": "Makeup",
+          "duration": "PT15M"
+        }
+      }
+    ]
+  }
+}
+</script>
+
+</head>
 
   <body>
     <header id="header" class="header">
@@ -127,15 +518,15 @@ waxing, hair removal, body waxing, facial waxing, eyebrow shaping, upper lip wax
 
             <div>
                 <ul class="services-categories">
-                    <li class="cat-active" data-filter="all">All</li>
-                    <li data-filter="nails">Nails</li>
-                    <li data-filter="wax">Wax</li>
-                    <li data-filter="hair">Hair</li>
-                    <li data-filter="makeup">Makeup</li>
+                    <li class="cat-active" data-group="all">All</li>
+                    <li data-group="nails">Nails</li>
+                    <li data-group="wax">Wax</li>
+                    <li data-group="hair">Hair</li>
+                    <li data-group="makeup">Makeup</li>
                 </ul>
             </div>
-          <div class="row">
-            <div class="card" id="nails" >
+          <div id="grid-container" class="row">
+            <div class="card" data-groups='["nails"]' >
               <div class="card-header">
                 <div class="card-title">
                   <div>Classic Manicure</div>
@@ -150,7 +541,7 @@ waxing, hair removal, body waxing, facial waxing, eyebrow shaping, upper lip wax
                 polish application.
               </div>
             </div>
-            <div class="card" id="nails" >
+            <div class="card" data-groups='["nails"]' >
               <div class="card-header">
                 <div class="card-title">
                   <div>Classic Pedicure</div>
@@ -167,7 +558,7 @@ waxing, hair removal, body waxing, facial waxing, eyebrow shaping, upper lip wax
                 with polish.
               </div>
             </div>
-            <div class="card" id="nails" >
+            <div class="card" data-groups='["nails"]' >
               <div class="card-header">
                 <div class="card-title">
                   <div>Gentle Care Pedicure</div>
@@ -183,7 +574,7 @@ waxing, hair removal, body waxing, facial waxing, eyebrow shaping, upper lip wax
                 attention.
               </div>
             </div>
-            <div class="card" id="nails" >
+            <div class="card" data-groups='["nails"]' >
               <div class="card-header">
                 <div class="card-title">
                   <div>Gelish Rubber Base Coat</div>
@@ -199,7 +590,7 @@ waxing, hair removal, body waxing, facial waxing, eyebrow shaping, upper lip wax
               </div>
             </div>
 
-            <div class="card" id="nails" >
+            <div class="card" data-groups='["nails"]' >
               <div class="card-header">
                 <div class="card-title">
                   <div>Acrylic Full Set</div>
@@ -217,7 +608,7 @@ waxing, hair removal, body waxing, facial waxing, eyebrow shaping, upper lip wax
               </div>
             </div>
 
-            <div class="card" id="nails" >
+            <div class="card" data-groups='["nails"]' >
               <div class="card-header">
                 <div class="card-title">
                   <div>Acrylic Refill</div>
@@ -233,7 +624,7 @@ waxing, hair removal, body waxing, facial waxing, eyebrow shaping, upper lip wax
               </div>
             </div>
 
-            <div class="card" id="nails" >
+            <div class="card" data-groups='["nails"]' >
               <div class="card-header">
                 <div class="card-title">
                   <div>Gel Full Set</div>
@@ -251,7 +642,7 @@ waxing, hair removal, body waxing, facial waxing, eyebrow shaping, upper lip wax
               </div>
             </div>
 
-            <div class="card" id="nails" >
+            <div class="card" data-groups='["nails"]' >
               <div class="card-header">
                 <div class="card-title">
                   <div>Gel Refill</div>
@@ -267,7 +658,7 @@ waxing, hair removal, body waxing, facial waxing, eyebrow shaping, upper lip wax
               </div>
             </div>
 
-            <div class="card" id="nails" >
+            <div class="card" data-groups='["nails"]' >
               <div class="card-header">
                 <div class="card-title">
                   <div>GelX</div>
@@ -283,7 +674,7 @@ waxing, hair removal, body waxing, facial waxing, eyebrow shaping, upper lip wax
               </div>
             </div>
 
-            <div class="card" id="nails" >
+            <div class="card" data-groups='["nails"]' >
               <div class="card-header">
                 <div class="card-title">
                   <div>French Manicure</div>
@@ -299,7 +690,7 @@ waxing, hair removal, body waxing, facial waxing, eyebrow shaping, upper lip wax
               </div>
             </div>
 
-            <div class="card" id="nails" >
+            <div class="card" data-groups='["nails"]' >
               <div class="card-header">
                 <div class="card-title">
                   <div>Artificial Nails</div>
@@ -315,7 +706,7 @@ waxing, hair removal, body waxing, facial waxing, eyebrow shaping, upper lip wax
               </div>
             </div>
 
-            <div class="card" id="nails" >
+            <div class="card" data-groups='["nails"]' >
               <div class="card-header">
                 <div class="card-title">
                   <div>Paraffin Treatment</div>
@@ -333,7 +724,7 @@ waxing, hair removal, body waxing, facial waxing, eyebrow shaping, upper lip wax
               </div>
             </div>
 
-            <div class="card" id="nails" >
+            <div class="card" data-groups='["nails"]' >
               <div class="card-header">
                 <div class="card-title">
                   <div>Pedex Foot Treatment</div>
@@ -349,7 +740,7 @@ waxing, hair removal, body waxing, facial waxing, eyebrow shaping, upper lip wax
               </div>
             </div>
             <!-- Waxing -->
-            <div class="card" id="wax" >
+            <div class="card" data-groups='["wax"]' >
               <div class="card-header">
                 <div class="card-title">
                   <div>Eyebrow Waxing</div>
@@ -364,7 +755,7 @@ waxing, hair removal, body waxing, facial waxing, eyebrow shaping, upper lip wax
                 brows.
               </div>
             </div>
-            <div class="card" id="wax" >
+            <div class="card" data-groups='["wax"]' >
               <div class="card-header">
                 <div class="card-title">
                   <div>Eyebrow Threading</div>
@@ -379,7 +770,7 @@ waxing, hair removal, body waxing, facial waxing, eyebrow shaping, upper lip wax
                 for ultimate precision.
               </div>
             </div>
-            <div class="card" id="wax" >
+            <div class="card" data-groups='["wax"]' >
               <div class="card-header">
                 <div class="card-title">
                   <div>Upper Lip Wax</div>
@@ -394,7 +785,7 @@ waxing, hair removal, body waxing, facial waxing, eyebrow shaping, upper lip wax
                 wax.
               </div>
             </div>
-            <div class="card" id="wax" >
+            <div class="card" data-groups='["wax"]' >
               <div class="card-header">
                 <div class="card-title">
                   <div>Underarm Waxing</div>
@@ -412,7 +803,7 @@ waxing, hair removal, body waxing, facial waxing, eyebrow shaping, upper lip wax
 
             <!-- hair styling -->
 
-            <div class="card" id="hair" >
+            <div class="card" data-groups='["hair"]' >
               <div class="card-header">
                 <div class="card-title">
                   <div>Brushing</div>
@@ -428,7 +819,7 @@ waxing, hair removal, body waxing, facial waxing, eyebrow shaping, upper lip wax
               </div>
             </div>
 
-            <div class="card" id="hair" >
+            <div class="card" data-groups='["hair"]' >
               <div class="card-header">
                 <div class="card-title">
                   <div>Flat Iron</div>
@@ -444,7 +835,7 @@ waxing, hair removal, body waxing, facial waxing, eyebrow shaping, upper lip wax
               </div>
             </div>
 
-            <div class="card" id="hair" >
+            <div class="card" data-groups='["hair"]' >
               <div class="card-header">
                 <div class="card-title">
                   <div>Half Ponytail</div>
@@ -459,7 +850,7 @@ waxing, hair removal, body waxing, facial waxing, eyebrow shaping, upper lip wax
               </div>
             </div>
 
-            <div class="card" id="hair" >
+            <div class="card" data-groups='["hair"]' >
               <div class="card-header">
                 <div class="card-title">
                   <div>Chignon</div>
@@ -474,7 +865,7 @@ waxing, hair removal, body waxing, facial waxing, eyebrow shaping, upper lip wax
               </div>
             </div>
 
-            <div class="card" id="hair" >
+            <div class="card" data-groups='["hair"]' >
               <div class="card-header">
                 <div class="card-title">
                   <div>Haircut</div>
@@ -489,7 +880,7 @@ waxing, hair removal, body waxing, facial waxing, eyebrow shaping, upper lip wax
               </div>
             </div>
 
-            <div class="card" id="hair" >
+            <div class="card" data-groups='["hair"]' >
               <div class="card-header">
                 <div class="card-title">
                   <div>Hair Color</div>
@@ -504,7 +895,7 @@ waxing, hair removal, body waxing, facial waxing, eyebrow shaping, upper lip wax
               </div>
             </div>
 
-            <div class="card" id="hair" >
+            <div class="card" data-groups='["hair"]' >
               <div class="card-header">
                 <div class="card-title">
                   <div>Rinse</div>
@@ -519,7 +910,7 @@ waxing, hair removal, body waxing, facial waxing, eyebrow shaping, upper lip wax
               </div>
             </div>
 
-            <div class="card" id="hair" >
+            <div class="card" data-groups='["hair"]' >
               <div class="card-header">
                 <div class="card-title">
                   <div>Highlights</div>
@@ -534,7 +925,7 @@ waxing, hair removal, body waxing, facial waxing, eyebrow shaping, upper lip wax
               </div>
             </div>
 
-            <div class="card" id="hair" >
+            <div class="card" data-groups='["hair"]' >
               <div class="card-header">
                 <div class="card-title">
                   <div>Ombre</div>
@@ -549,7 +940,7 @@ waxing, hair removal, body waxing, facial waxing, eyebrow shaping, upper lip wax
               </div>
             </div>
 
-            <div class="card" id="hair" >
+            <div class="card" data-groups='["hair"]' >
               <div class="card-header">
                 <div class="card-title">
                   <div>Balayage</div>
@@ -564,7 +955,7 @@ waxing, hair removal, body waxing, facial waxing, eyebrow shaping, upper lip wax
               </div>
             </div>
 
-            <div class="card" id="hair" >
+            <div class="card" data-groups='["hair"]' >
               <div class="card-header">
                 <div class="card-title">
                   <div>Brazilian Blowout</div>
@@ -579,7 +970,7 @@ waxing, hair removal, body waxing, facial waxing, eyebrow shaping, upper lip wax
               </div>
             </div>
 
-            <div class="card" id="hair" >
+            <div class="card" data-groups='["hair"]' >
               <div class="card-header">
                 <div class="card-title">
                   <div>Oil Bath</div>
@@ -593,7 +984,7 @@ waxing, hair removal, body waxing, facial waxing, eyebrow shaping, upper lip wax
                 Nourishing oil treatment to hydrate and strengthen hair.
               </div>
             </div>
-            <div class="card" id="makeup" >
+            <div class="card" data-groups='["makeup"]' >
               <div class="card-header">
                 <div class="card-title">
                   <div>Day Makeup</div>
@@ -609,7 +1000,7 @@ waxing, hair removal, body waxing, facial waxing, eyebrow shaping, upper lip wax
               </div>
             </div>
 
-            <div class="card" id="makeup" >
+            <div class="card" data-groups='["makeup"]' >
               <div class="card-header">
                 <div class="card-title">
                   <div>Evening Glam</div>
@@ -625,7 +1016,7 @@ waxing, hair removal, body waxing, facial waxing, eyebrow shaping, upper lip wax
               </div>
             </div>
 
-            <div class="card" id="makeup" >
+            <div class="card" data-groups='["makeup"]' >
               <div class="card-header">
                 <div class="card-title">
                   <div>Bridal Makeup</div>
@@ -640,7 +1031,7 @@ waxing, hair removal, body waxing, facial waxing, eyebrow shaping, upper lip wax
               </div>
             </div>
 
-            <div class="card" id="makeup" >
+            <div class="card" data-groups='["makeup"]' >
               <div class="card-header">
                 <div class="card-title">
                   <div>Engagement Makeup</div>
@@ -655,7 +1046,7 @@ waxing, hair removal, body waxing, facial waxing, eyebrow shaping, upper lip wax
               </div>
             </div>
 
-            <div class="card" id="makeup" >
+            <div class="card" data-groups='["makeup"]' >
               <div class="card-header">
                 <div class="card-title">
                   <div>Photoshoot Makeup</div>
@@ -671,7 +1062,7 @@ waxing, hair removal, body waxing, facial waxing, eyebrow shaping, upper lip wax
               </div>
             </div>
 
-            <div class="card" id="makeup" >
+            <div class="card" data-groups='["makeup"]' >
               <div class="card-header">
                 <div class="card-title">
                   <div>Makeup Consultation</div>
@@ -686,7 +1077,7 @@ waxing, hair removal, body waxing, facial waxing, eyebrow shaping, upper lip wax
               </div>
             </div>
 
-            <div class="card" id="makeup" >
+            <div class="card" data-groups='["makeup"]' >
               <div class="card-header">
                 <div class="card-title">
                   <div>Eye Makeup Only</div>
@@ -701,7 +1092,7 @@ waxing, hair removal, body waxing, facial waxing, eyebrow shaping, upper lip wax
               </div>
             </div>
 
-            <div class="card" id="makeup" >
+            <div class="card" data-groups='["makeup"]' >
               <div class="card-header">
                 <div class="card-title">
                   <div>Touch-Up</div>
@@ -726,18 +1117,16 @@ waxing, hair removal, body waxing, facial waxing, eyebrow shaping, upper lip wax
           <h3>Lina's<span>Touch</span></h3>
           <p>Dedicated to delivering excellence, we craft premium experiences with expertise and care.</p>
           <div class="social-links">
-            <a href="https://facebook.com/page" class="social-link">
-              <i class="fa-brands fa-facebook"></i>
-            </a>
-            <a href="https://instagram.com/page" class="social-link">
+            <a href="https://instagram.com/linastouch_lb" target="_blank" rel="noopener noreferrer" class="social-link">
               <i class="fa-brands fa-instagram"></i>
             </a>
-            <a href="https://tiktok.com/@page" class="social-link">
-              <i class="fa-brands fa-tiktok"></i>
-            </a>
-            <a href="https://wa.me/96171363003" class="social-link">
+            <a href="https://wa.me/96171363003" target="_blank" rel="noopener noreferrer" class="social-link">
               <i class="fa-brands fa-whatsapp"></i>
             </a>
+            <a href="https://share.google/wbnZwsCmyOdUXwrXF" target="_blank" rel="noopener noreferrer" class="social-link" title="Google Business">
+              <i class="fa-brands fa-google"></i>
+            </a>
+
           </div>
         </div>
 
@@ -798,6 +1187,7 @@ waxing, hair removal, body waxing, facial waxing, eyebrow shaping, upper lip wax
   </a>
 
     <!-- JavaScript -->
+     
     <script src="js/main.js"></script>
     <script src="js/services.js"></script>
   </body>

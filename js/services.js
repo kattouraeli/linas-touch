@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const cards = document.querySelectorAll(".card");
   const catTitle = document.getElementById("cat-title");
 
-  // Map filter categories to desired titles
   const categoryTitles = {
     all: "All Services",
     nails: "Nail Care & Design",
@@ -12,47 +11,58 @@ document.addEventListener("DOMContentLoaded", () => {
     makeup: "Makeup Artistry"
   };
 
-  filterButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      // Remove active class from all filter buttons
-      filterButtons.forEach((btn) => btn.classList.remove("cat-active"));
-      // Add active class to clicked filter button
-      button.classList.add("cat-active");
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      // Update active button
+      filterButtons.forEach(btn => btn.classList.remove('cat-active'));
+      button.classList.add('cat-active');
 
-      const filterCategory = button.innerText.trim().toLowerCase();
+      const filterGroup = button.getAttribute('data-group');
 
-      // Update the category title
+      // Update category title
       if (catTitle) {
-        catTitle.textContent = categoryTitles[filterCategory] || "Services";
+        catTitle.textContent = categoryTitles[filterGroup] || "Services";
       }
 
-      // Filter cards based on category
-      cards.forEach((card) => {
-        if (filterCategory === "all") {
-          card.style.display = "block";
+      cards.forEach(card => {
+        const groups = card.getAttribute('data-groups');
+        const groupArray = groups ? JSON.parse(groups) : [];
+
+        if (filterGroup === 'all' || groupArray.includes(filterGroup)) {
+          // Show with animation
+          card.style.display = 'block';
+
+          // Force reflow and animate
+          requestAnimationFrame(() => {
+            card.style.opacity = '1';
+            card.style.maxHeight = '1000px';
+            card.style.padding = '16px';
+          });
         } else {
-          if (card.id.toLowerCase() === filterCategory) {
-            card.style.display = "block";
-          } else {
-            card.style.display = "none";
-            // Collapse card if hidden
-            card.classList.remove("active");
-          }
+          // Animate hide
+          card.style.opacity = '0';
+          card.style.maxHeight = '0';
+          card.style.padding = '0';
+
+          // After opacity transition, set display none
+          card.addEventListener('transitionend', function handler(e) {
+            if (e.propertyName === 'opacity' && card.style.opacity === '0') {
+              card.style.display = 'none';
+              card.removeEventListener('transitionend', handler);
+            }
+          });
         }
       });
     });
   });
 
-  // Toggle card description on card click (accordion behavior)
-  cards.forEach((card) => {
-    card.addEventListener("click", () => {
-      cards.forEach((c) => {
-        if (c !== card) {
-          c.classList.remove("active");
-        }
+  // Card description toggle
+  cards.forEach(card => {
+    card.addEventListener('click', () => {
+      cards.forEach(c => {
+        if (c !== card) c.classList.remove('active');
       });
-
-      card.classList.toggle("active");
+      card.classList.toggle('active');
     });
   });
 });
