@@ -1,0 +1,29 @@
+{
+  "images": [
+    {
+      "src": "/images/gallery/image01.png",
+      "alt": "Elegant red and white nail art"
+    },
+    {
+      "src": "/images/gallery/image02.png",
+      "alt": "Elegant hands with royal blue nails"
+    },
+    {
+      "src": "/images/gallery/image03.png",
+      "alt": "Soft pink elegance with black towel"
+    },
+    {
+      "src": "/images/gallery/image04.png",
+      "alt": "Glamorous red nails and gold rings"
+    },
+    {
+      "src": "/images/gallery/image05.png",
+      "alt": "Elegant glitter nails with minimalist watch"
+    },
+    {
+      "src": "/images/gallery/image07.png",
+      "alt": "Red manicure with gold rings detail"
+    }
+
+]
+}
